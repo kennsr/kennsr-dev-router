@@ -10,6 +10,14 @@ const nextConfig = {
         source: '/mitraagungsejati/:path*',
         destination: 'https://mitra-catalyst-redesign.vercel.app/mitraagungsejati/:path*',
       },
+      {
+        source: '/jagoanhelm',
+        destination: 'https://jagoan-helm.vercel.app/jagoanhelm',
+      },
+      {
+        source: '/jagoanhelm/:path*',
+        destination: 'https://jagoan-helm.vercel.app/jagoanhelm/:path*',
+      },
     ];
   },
 };

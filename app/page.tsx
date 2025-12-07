@@ -38,6 +38,30 @@ export default function Home() {
             </Link>
           </div>
 
+          <div className="group relative">
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-xl opacity-20 group-hover:opacity-40 transition duration-500 blur"></div>
+            <Link 
+              href="/jagoanhelm"
+              className="relative block bg-neutral-900 rounded-xl p-6 border border-neutral-800 hover:border-yellow-500/30 transition duration-300"
+            >
+              <div className="flex items-center justify-between">
+                <div>
+                  <h2 className="text-xl font-semibold text-white mb-2 group-hover:text-yellow-400 transition-colors">
+                    Jagoan Helm Jakarta
+                  </h2>
+                  <p className="text-neutral-400 text-sm">
+                    Client Project • Helmet Retail
+                  </p>
+                </div>
+                <div className="text-neutral-500 group-hover:text-yellow-400 transition-transform group-hover:translate-x-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+          </div>
+
           {/* Placeholder for future projects */}
           {/* 
           <div className="p-6 rounded-xl border border-neutral-800 border-dashed text-center text-neutral-600">
