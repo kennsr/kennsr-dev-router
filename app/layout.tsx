@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Landing Murah",
   description: "Affordable Landing Page Solutions",
   icons: {
-    icon: "/site-icon.jpg",
+    icon: "/site-icon.png",
   },
 };
 

@@ -24,12 +24,28 @@ const projects = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-neutral-200 flex flex-col items-center p-8 font-sans">
-      <div className="max-w-6xl w-full space-y-12">
+    <main className="min-h-screen bg-black text-neutral-200 flex flex-col items-center p-8 font-sans relative overflow-hidden">
+      {/* Cinematic Background */}
+      {/* Cinematic Background */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none">
+        {/* Main large slow blobs */}
+        <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-neutral-800 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob"></div>
+        <div className="absolute -top-40 right-0 w-[600px] h-[600px] bg-neutral-700 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob-bounce animation-delay-2000"></div>
+        <div className="absolute -bottom-80 left-20 w-[600px] h-[600px] bg-neutral-800 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+
+        {/* Smaller faster accent blobs */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-neutral-900 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-blob-bounce animation-delay-6000"></div>
+        <div className="absolute bottom-0 right-20 w-[500px] h-[500px] bg-zinc-800 rounded-full mix-blend-screen filter blur-2xl opacity-20 animate-blob animation-delay-8000"></div>
+
+        {/* Noise overlay */}
+        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-20 brightness-100 contrast-150 mix-blend-overlay"></div>
+      </div>
+
+      <div className="max-w-6xl w-full space-y-12 relative z-10">
         <header className="text-center space-y-6 pt-8">
           <div className="flex justify-center">
             <Image
-              src="/site-icon.jpg"
+              src="/site-icon.png"
               alt="Landing Murah Logo"
               width={120}
               height={120}
