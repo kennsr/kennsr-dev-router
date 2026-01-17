@@ -1,77 +1,89 @@
-import Link from 'next/link';
+import Link from "next/link";
+import Image from "next/image";
+
+const projects = [
+  {
+    name: "Mitra Agung Sejati",
+    description: "Client Project • Construction & Engineering",
+    href: "/mitraagungsejati",
+    previewUrl: "https://mitra-catalyst-redesign.vercel.app/mitraagungsejati",
+  },
+  {
+    name: "Jagoan Helm Jakarta",
+    description: "Client Project • Helmet Retail",
+    href: "/jagoanhelm",
+    previewUrl: "https://jagoan-helm.vercel.app/jagoanhelm",
+  },
+  {
+    name: "Aura Glass OS",
+    description: "Personal Project • UI/UX Experiment",
+    href: "/auraglassos",
+    previewUrl: "https://aura-glass-os.vercel.app/",
+  },
+];
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-neutral-200 flex flex-col items-center justify-center p-8 font-sans">
-      <div className="max-w-2xl w-full space-y-12">
-        <header className="text-center space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent">
-            dev.kennsr.com
+    <main className="min-h-screen bg-black text-neutral-200 flex flex-col items-center p-8 font-sans">
+      <div className="max-w-6xl w-full space-y-12">
+        <header className="text-center space-y-6 pt-8">
+          <div className="flex justify-center">
+            <Image
+              src="/site-icon.jpg"
+              alt="Landing Murah Logo"
+              width={120}
+              height={120}
+              className="rounded-xl"
+            />
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white">
+            Landing Murah
           </h1>
           <p className="text-neutral-400 text-lg">
-            Development Directory & Router
+            Affordable Landing Page Solutions
           </p>
         </header>
 
-        <section className="grid gap-6">
-          <div className="group relative">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-xl opacity-20 group-hover:opacity-40 transition duration-500 blur"></div>
-            <Link 
-              href="/mitraagungsejati"
-              className="relative block bg-neutral-900 rounded-xl p-6 border border-neutral-800 hover:border-yellow-500/30 transition duration-300"
-            >
-              <div className="flex items-center justify-between">
-                <div>
-                  <h2 className="text-xl font-semibold text-white mb-2 group-hover:text-yellow-400 transition-colors">
-                    Mitra Agung Sejati
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project) => (
+            <div key={project.href} className="group relative">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-white/10 to-neutral-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 blur"></div>
+              <div className="relative bg-neutral-900 rounded-2xl border border-neutral-800 group-hover:border-white/20 transition duration-300 overflow-hidden">
+                {/* Iframe Preview */}
+                <div className="relative w-full aspect-[16/10] bg-neutral-950 overflow-hidden">
+                  <iframe
+                    src={project.previewUrl}
+                    className="w-[400%] h-[400%] origin-top-left scale-[0.25] pointer-events-none"
+                    title={`${project.name} Preview`}
+                    loading="lazy"
+                  />
+                  {/* Overlay for click */}
+                  <Link
+                    href={project.href}
+                    className="absolute inset-0 bg-transparent hover:bg-white/5 transition-colors flex items-center justify-center"
+                  >
+                    <span className="opacity-0 group-hover:opacity-100 transition-opacity bg-white text-black px-4 py-2 rounded-full text-sm font-medium">
+                      View Project →
+                    </span>
+                  </Link>
+                </div>
+
+                {/* Project Info */}
+                <div className="p-5">
+                  <h2 className="text-lg font-semibold text-white mb-1 group-hover:text-neutral-300 transition-colors">
+                    {project.name}
                   </h2>
-                  <p className="text-neutral-400 text-sm">
-                    Client Project • Construction & Engineering
+                  <p className="text-neutral-500 text-sm">
+                    {project.description}
                   </p>
                 </div>
-                <div className="text-neutral-500 group-hover:text-yellow-400 transition-transform group-hover:translate-x-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                  </svg>
-                </div>
               </div>
-            </Link>
-          </div>
-
-          <div className="group relative">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-xl opacity-20 group-hover:opacity-40 transition duration-500 blur"></div>
-            <Link 
-              href="/jagoanhelm"
-              className="relative block bg-neutral-900 rounded-xl p-6 border border-neutral-800 hover:border-yellow-500/30 transition duration-300"
-            >
-              <div className="flex items-center justify-between">
-                <div>
-                  <h2 className="text-xl font-semibold text-white mb-2 group-hover:text-yellow-400 transition-colors">
-                    Jagoan Helm Jakarta
-                  </h2>
-                  <p className="text-neutral-400 text-sm">
-                    Client Project • Helmet Retail
-                  </p>
-                </div>
-                <div className="text-neutral-500 group-hover:text-yellow-400 transition-transform group-hover:translate-x-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                  </svg>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Placeholder for future projects */}
-          {/* 
-          <div className="p-6 rounded-xl border border-neutral-800 border-dashed text-center text-neutral-600">
-            More projects coming soon...
-          </div> 
-          */}
+            </div>
+          ))}
         </section>
 
-        <footer className="text-center text-neutral-600 text-sm pt-12">
-          <p>&copy; {new Date().getFullYear()} KennSr Development</p>
+        <footer className="text-center text-neutral-600 text-sm pt-12 pb-8">
+          <p>&copy; {new Date().getFullYear()} Landing Murah</p>
         </footer>
       </div>
     </main>

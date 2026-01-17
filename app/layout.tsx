@@ -13,8 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kennsr Development Environment",
-  description: "Development Directory & Router",
+  title: "Landing Murah",
+  description: "Affordable Landing Page Solutions",
+  icons: {
+    icon: "/site-icon.jpg",
+  },
 };
 
 export default function RootLayout({
