@@ -18,7 +18,7 @@ const projects = [
     name: "Aura Glass OS",
     description: "Personal Project • UI/UX Experiment",
     href: "/auraglassos",
-    previewUrl: "https://aura-glass-os.vercel.app/",
+    previewUrl: "https://aura-glass-os.vercel.app/auraglassos",
   },
 ];
 
