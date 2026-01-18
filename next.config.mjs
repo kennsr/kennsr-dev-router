@@ -28,6 +28,15 @@ const nextConfig = {
         source: "/auraglassos/:path*",
         destination: "https://aura-glass-os.vercel.app/:path*",
       },
+      {
+        source: "/lavantgarde",
+        destination: "https://heritage-future-luxury.vercel.app/lavantgarde",
+      },
+      {
+        source: "/lavantgarde/:path*",
+        destination:
+          "https://heritage-future-luxury.vercel.app/lavantgarde/:path*",
+      },
     ];
   },
 };

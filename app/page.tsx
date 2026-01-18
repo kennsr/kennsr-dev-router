@@ -20,6 +20,12 @@ const projects = [
     href: "/auraglassos",
     previewUrl: "/auraglassos",
   },
+  {
+    name: "Lavantgarde",
+    description: "Client Project • Fashion & Lifestyle",
+    href: "/lavantgarde",
+    previewUrl: "/lavantgarde",
+  },
 ];
 
 export default function Home() {
