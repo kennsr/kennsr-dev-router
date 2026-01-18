@@ -3,10 +3,10 @@ import Image from "next/image";
 
 const projects = [
   {
-    name: "Mitra Agung Sejati",
+    name: "Mitra Cahaya Agung",
     description: "Client Project • Construction & Engineering",
-    href: "/mitraagungsejati",
-    previewUrl: "https://mitra-catalyst-redesign.vercel.app/mitraagungsejati",
+    href: "/mitracahayaagung",
+    previewUrl: "https://mitra-catalyst-redesign.vercel.app/mitracahayaagung",
   },
   {
     name: "Jagoan Helm Jakarta",

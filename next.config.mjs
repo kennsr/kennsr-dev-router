@@ -3,14 +3,14 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/mitraagungsejati",
+        source: "/mitracahayaagung",
         destination:
-          "https://mitra-catalyst-redesign.vercel.app/mitraagungsejati",
+          "https://mitra-catalyst-redesign.vercel.app/mitracahayaagung",
       },
       {
-        source: "/mitraagungsejati/:path*",
+        source: "/mitracahayaagung/:path*",
         destination:
-          "https://mitra-catalyst-redesign.vercel.app/mitraagungsejati/:path*",
+          "https://mitra-catalyst-redesign.vercel.app/mitracahayaagung/:path*",
       },
       {
         source: "/jagoanhelm",
