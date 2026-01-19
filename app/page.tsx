@@ -26,6 +26,12 @@ const projects = [
     href: "/lavantgarde",
     previewUrl: "/lavantgarde",
   },
+  {
+    name: "Lumina Mind Wellness",
+    description: "Client Project • Health & Wellness",
+    href: "/lumina-mind-wellness",
+    previewUrl: "https://lumina-mind-wellness.vercel.app/lumina-mind-wellness",
+  },
 ];
 
 export default function Home() {

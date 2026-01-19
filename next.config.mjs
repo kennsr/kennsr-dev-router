@@ -37,6 +37,16 @@ const nextConfig = {
         destination:
           "https://heritage-future-luxury.vercel.app/lavantgarde/:path*",
       },
+      {
+        source: "/lumina-mind-wellness",
+        destination:
+          "https://lumina-mind-wellness.vercel.app/lumina-mind-wellness",
+      },
+      {
+        source: "/lumina-mind-wellness/:path*",
+        destination:
+          "https://lumina-mind-wellness.vercel.app/lumina-mind-wellness/:path*",
+      },
     ];
   },
 };
