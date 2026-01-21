@@ -47,6 +47,14 @@ const nextConfig = {
         destination:
           "https://lumina-mind-wellness.vercel.app/lumina-mind-wellness/:path*",
       },
+      {
+        source: "/zenith-vista",
+        destination: "https://zenith-vista.vercel.app/",
+      },
+      {
+        source: "/zenith-vista/:path*",
+        destination: "https://zenith-vista.vercel.app/:path*",
+      },
     ];
   },
 };

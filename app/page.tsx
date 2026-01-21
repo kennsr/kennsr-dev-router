@@ -32,6 +32,12 @@ const projects = [
     href: "/lumina-mind-wellness",
     previewUrl: "https://lumina-mind-wellness.vercel.app/lumina-mind-wellness",
   },
+  {
+    name: "Zenith Vista",
+    description: "Client Project • Business & Technology",
+    href: "/zenith-vista",
+    previewUrl: "https://zenith-vista.vercel.app/",
+  },
 ];
 
 export default function Home() {
