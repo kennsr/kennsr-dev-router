@@ -13,12 +13,16 @@
 
   --animate-blob: blob 20s infinite alternate;
   --animate-blob-bounce: blob-bounce 25s infinite alternate-reverse;
+  --animate-shine: shine 8s linear infinite;
+  --animate-fade-in: fade-in 1s ease-out forwards;
+  --animate-slide-up: slide-up 0.8s ease-out forwards;
+  --animate-glow-pulse: glow-pulse 3s infinite alternate;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #030303; /* Deep premium black */
+    --foreground: #f4f4f5;
   }
 }
 
@@ -26,6 +30,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 @keyframes blob {
@@ -55,18 +60,90 @@ body {
   }
 }
 
+@keyframes shine {
+  from {
+    background-position: 200% center;
+  }
+  to {
+    background-position: -200% center;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow-pulse {
+  0% {
+    opacity: 0.5;
+    filter: blur(20px);
+  }
+  100% {
+    opacity: 0.8;
+    filter: blur(30px);
+    box-shadow: 0 0 60px 10px rgba(168, 85, 247, 0.4);
+  }
+}
+
 .animation-delay-2000 {
   animation-delay: 2s;
 }
-
+.animation-delay-3000 {
+  animation-delay: 3s;
+}
 .animation-delay-4000 {
   animation-delay: 4s;
 }
-
+.animation-delay-5000 {
+  animation-delay: 5s;
+}
 .animation-delay-6000 {
   animation-delay: 6s;
 }
-
 .animation-delay-8000 {
   animation-delay: 8s;
+}
+
+/* Custom utility for glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.01) 100%
+  );
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Gradient Text */
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
