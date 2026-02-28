@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Outfit, JetBrains_Mono, Archivo_Black } from "next/font/google";
+import { Outfit, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 const outfitFont = Outfit({
@@ -9,12 +9,6 @@ const outfitFont = Outfit({
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-mono",
-  subsets: ["latin"],
-});
-
-const archivoBlack = Archivo_Black({
-  weight: "400",
-  variable: "--font-bold-display",
   subsets: ["latin"],
 });
 
@@ -75,7 +69,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${outfitFont.variable} ${jetbrainsMono.variable} ${archivoBlack.variable} font-sans antialiased`}
+        className={`${outfitFont.variable} ${jetbrainsMono.variable} font-sans antialiased`}
       >
         {children}
       </body>

@@ -141,7 +141,7 @@ export default function PricingStory() {
               WEBSITE AGENCY
             </div>
             <h2
-              className={`text-3xl md:text-5xl font-display text-neutral-300 tracking-wide uppercase ${currentSlide === 0 ? "animate-fade-up" : "opacity-0"}`}
+              className={`text-xl md:text-4xl font-sans font-black text-neutral-300 tracking-wide uppercase ${currentSlide === 0 ? "animate-fade-up" : "opacity-0"}`}
               style={{ animationDelay: "100ms" }}
             >
               Professional
@@ -150,7 +150,7 @@ export default function PricingStory() {
             </h2>
             <div className="mx-auto w-full pt-2">
               <div
-                className={`text-[3.5rem] leading-[1.1] md:text-[5rem] font-display uppercase bg-clip-text text-transparent bg-linear-to-br from-violet-300 via-fuchsia-400 to-rose-400 filter drop-shadow-[0_0_20px_rgba(192,132,252,0.6)] ${currentSlide === 0 ? "animate-fade-up" : "opacity-0"}`}
+                className={`text-[2.8rem] leading-[1.05] md:text-[5rem] font-sans font-black uppercase tracking-tight bg-clip-text text-transparent bg-linear-to-br from-violet-300 via-fuchsia-400 to-rose-400 filter drop-shadow-[0_0_20px_rgba(192,132,252,0.6)] ${currentSlide === 0 ? "animate-fade-up" : "opacity-0"}`}
                 style={{ animationDelay: "200ms" }}
               >
                 AFFORDABLE
@@ -184,7 +184,7 @@ export default function PricingStory() {
             className={`text-center mb-10 ${currentSlide === 1 ? "animate-fade-up" : "opacity-0"}`}
             style={{ animationDelay: "100ms" }}
           >
-            <h2 className="text-4xl font-display uppercase text-white mb-2 tracking-wide">
+            <h2 className="text-3xl font-sans font-black uppercase text-white mb-2 tracking-wide">
               Landing Page Starter
             </h2>
             <p className="text-neutral-400 text-sm tracking-wider uppercase font-semibold">
@@ -249,7 +249,7 @@ export default function PricingStory() {
             className={`text-center mb-10 ${currentSlide === 2 ? "animate-fade-up" : "opacity-0"}`}
             style={{ animationDelay: "100ms" }}
           >
-            <h2 className="text-4xl md:text-5xl uppercase font-display text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-teal-500 drop-shadow-[0_0_10px_rgba(52,211,153,0.4)]">
+            <h2 className="text-4xl md:text-5xl font-sans font-black uppercase text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-teal-500 drop-shadow-[0_0_10px_rgba(52,211,153,0.4)]">
               What You Get
             </h2>
           </div>
